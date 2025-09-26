@@ -13,3 +13,4 @@ services:
     restart: unless-stopped
     labels:
       - wud.watch.digest=true
+      - traefik.enable=false
