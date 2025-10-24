@@ -2,15 +2,15 @@ name: Croc relay
 
 services:
   croc:
-    image: schollz/croc:main
+    image: schollz/croc:${CROC_VERSION}
     container_name: croc
     volumes:
       - /etc/timezone:/etc/timezone:ro
     environment:
       - CROC_PASS
     ports:
-      - "0.0.0.0:9009-9013:9009-9013"
+      - '0.0.0.0:9009-9013:9009-9013'
     restart: unless-stopped
     labels:
-      - wud.watch.digest=true
+      - wud.tag.include=^\d+\.\d+\.\d+$$
       - traefik.enable=false
