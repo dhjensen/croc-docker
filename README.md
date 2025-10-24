@@ -5,5 +5,6 @@
 ## .env example
 
 ```bash
+CROC_VERSION=version
 CROC_PASS=password
 ```
